@@ -1,0 +1,553 @@
+@import url('utility.css');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--colorblk);
+    color: var(--colorwht);
+    font-family: "Roboto", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--colorblk); 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--colorlblk);; 
+}
+  
+ /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--colorlblk); 
+}
+
+.leftsec{
+    width: 285px;
+    position: relative;
+    z-index: 2;
+}
+
+.rightsec{
+    width: 100%;
+    position: relative;
+}
+
+.hamclose{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    display: none;
+}
+
+.hamclose{
+    font-size: 25px;;
+}
+
+.home{
+    height: 113px;
+}
+
+.home ul li{
+    cursor: pointer;
+    list-style: none;
+}
+
+.home ul li a:hover{
+    color: var(--colorwht);
+    opacity: 1;
+}
+
+.home ul li span{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.home ul i{
+    font-size: 22px;
+}
+
+.library{
+    height: calc(100vh - 275px);
+    overflow: auto;
+}
+
+.library .libhead{
+    cursor: pointer;
+}
+
+.library .libhead .libname{
+    gap: 15px;
+}
+
+.library .libhead span{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.library .libhead .libname svg{
+    fill: currentColor;
+    width: 25px;
+}
+
+.library .libhead .createplaylist i{
+    font-size: 15px;
+}
+
+.library .libhead .libname:hover{
+    color: var(--colorwht);
+}
+
+.library .libhead .createplaylist i:hover{
+    color: var(--colorwht);
+}
+
+.ctacard h3{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.ctacard p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.btn-white{
+    background-color: var(--colorwht);
+    color: var(--colorblk);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-black{
+    background-color: var(--colorblk);
+    color: var(--colorwht);
+    padding: 8px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.libsongs{
+    height: calc(100vh - 350px);
+    overflow: auto;
+}
+
+.playlcard{
+    align-items: center;
+}
+
+.playthumb i{
+    font-size: 25px;
+}
+
+.playthumb img{
+    width: 40px;
+}
+
+.playldet{
+    overflow: hidden;
+}
+
+.playldet h3{
+    font-size: 16px;
+    color: var(--colorwht);
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.playldet p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.playldet p{
+    font-size: 14px;
+    color: var(--colorgrey);
+    font-weight: 400;
+}
+
+.footer{
+    position: absolute;
+    bottom: 5px;
+}
+
+.footer span{
+    font-size: 12px;
+}
+
+.header{
+    background-color: #101010;
+    height: 48px;
+}
+
+.pagetoggle i{
+    font-size: 15px;
+}
+
+.hamburger{
+    display: none !important;
+    font-size: 25px !important;
+}
+
+.userlog p{
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+.logbtn{
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.logbtn:hover{
+    transform: scale(1.04);
+}
+
+.signbtn{
+    padding: 15px 15px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: var(--colorgrey);
+}
+
+.signbtn:hover{
+    color: var(--colorwht);
+    transform: scale(1.04);
+}
+
+.playlist{
+    min-height: calc(100vh - 180px);
+    background-image: linear-gradient(#1f1f1f, var(--colorlblk));
+}
+
+.playlist h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.playcards{
+    max-height: calc(100vh - 240px);
+    overflow: auto;
+}
+
+.playcard{
+    width: 170px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.playcard .pcthumb{
+    position: relative;
+}
+
+.playcard img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.playcard h2{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.playcard p{
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-weight: 400;
+}
+
+.playbtn{
+    width: 48px;
+    height: 48px;
+    border-radius: 25px;
+    background-color: var(--colorgrn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 8px;
+    bottom: 0px;
+    z-index: 1;
+    -webkit-box-shadow: 0 8px 8px rgba(0,0,0,.3);
+    box-shadow: 0 8px 8px rgba(0,0,0,.3);
+    opacity: 0;
+    transition: all 200ms ease-out;
+}
+
+.playbtn i{
+    font-size: 18px;
+    margin-top: 1px;
+    margin-left: 2px;
+    color: var(--colorblk);
+}
+
+.playcard:hover{
+    background-color: var(--colordgrey);
+}
+
+.playcard:hover .playbtn{ 
+    opacity: 1;
+    bottom: 8px;
+}
+
+.bottomsec{
+    width: 100vw;
+    height: 75px;
+    position: fixed;
+    bottom: 0px;
+    align-items: center;
+    z-index: 3;
+}
+
+.songname{
+    width: 25%;
+}
+
+.songname .playldet h3{
+    font-size: 12px;
+    color: var(--colorblk);
+    font-weight: 500;
+}
+
+.songname .playldet p{
+    font-size: 10px;
+    color: var(--colordgrey);
+    font-weight: 400;
+}
+
+.playbar{
+    width: 50%;
+    position: relative;
+    text-align: center;
+}
+
+.playbar i{
+    font-size: 25px;
+}
+
+.playcontrols{
+    width: 25%;
+}
+
+.seekctrl{
+    width: 95%;
+    position: absolute;
+    bottom: 0px;
+    align-items: center;
+    margin: auto;
+}
+
+.seekctrl span{
+    width: 48px;
+}
+
+.seekbar{
+    width: 90%; 
+    cursor: pointer;
+}
+
+.cstseek{
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    height: 6px;
+    background: var(--colorgrey)  
+}
+
+.cstseek::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 15px;
+    width: 15px;
+    background-color: var(--colorblk);
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+  
+.cstseek::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: var(--colorblk);
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+  
+.cstseek::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(0,0,0, .1)
+}
+
+.cstseek:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 13px rgba(0,0,0, .2)
+}
+  
+.cstseek::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(0,0,0, .1)
+}
+
+.cstseek:active::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(0,0,0, .2)
+}
+
+#volume-bar {
+    height: 20px;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+#volume-range{
+    background: linear-gradient(to right, #242424 50%, #A7A7A7 50%);
+}
+
+.icon{
+    width: 25px;
+}
+  
+.icon i {
+    font-size: 20px;
+    height: auto;
+}
+
+.playcontrols .cstseek{
+    width: 150px;
+    height: 8px
+}
+
+@media (max-width : 779px){
+    .leftsec{
+        position: absolute;
+        left : -295px;
+        transition: all .3s;
+        z-index:1;
+    }
+
+    .playcards{
+        justify-content: center;
+    }
+
+    .playcard{
+        width: 130px;
+    }
+
+    .playcard h2{
+        font-size: 14px;
+    }
+    
+    .playcard p{
+        font-size: 12px;
+    }
+    .hamburger{
+        display: inline-block !important;
+    }
+
+    .hamclose{
+        display: block;
+    }
+
+    .songname{
+        position: absolute;
+        left: 10px;
+        width: 65%;
+        bottom: 25px;
+    }
+
+    .playbar{
+        width: 100%;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    .seekctrl{
+        bottom: -5px;
+    }
+
+    .playcontrols {
+        display: none;
+    }
+
+}
+
+/* The popup background */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Popup Content */
+.popup-content {
+    background-color: var(--colorlblk);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 4px;
+    width: 300px; /* Could be more or less, depending on screen size */
+    color: var(--colorwht);
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--colorwht);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Login button style */
+.login-button button {
+    background-color: var(--colorgrn);
+    color: var(--colorwht);
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Full-width button */
+}
+
+.login-button button:hover {
+    background-color: #1ED760; /* Lighter green on hover */
+}

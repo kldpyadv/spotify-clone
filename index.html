@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="topsec flex">
+            <div class="leftsec bg-black p10">
+                <div class="hamclose">
+                    <i class="fa-solid fa-xmark whtcolor"></i>
+                </div>
+                <div class="home bg-lblack p20 rounded10">
+                    <div class="logo"><img class="invert" src="assets/images/logo.svg" alt="Spotify logo svg"></div>
+                    <ul>
+                        <li class="pt15"><a class="flex items-center whtcolor"><i class="fa-solid fa-house"></i><span class="mt5 ml15">Home</span></a></li>
+                        <li class="mt10 pt15"><a class="flex items-center greycolor"><i class="fa-solid fa-magnifying-glass"></i><span class="mt5 ml15">Search</span></a></li>
+                    </ul>
+                </div>
+                <div class="library bg-lblack p20 mt10 rounded10">
+                    <div class="libhead greycolor flex justify-between">
+                        <div class="libname flex">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"></path></svg>
+                            <h2><span class="mt5">Your Library</span></h2>
+                        </div>
+                        <div class="createplaylist">
+                            <i class="mt10 fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="userlib mt25">
+                        <!--<div class="ctacard whtcolor bg-dgrey p20 mt10 rounded10">
+                            <h3>Create Your First Playlist</h3>
+                            <p class="mt15">It's easy, we'll help you</p>
+                            <button class="btn btn-white mt20">Create Playlist</button>
+                        </div>-->
+                        <div class="libsongs" id="tracksContainer">
+                                      
+                        </div>
+                    </div>
+                    <div class="footer p20 mt10 ">
+                        <a><span class="greycolor">Cookies</span></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="rightsec bg-black pt10 pb10 pr10">
+                <div class="header p5 pr25 rounded10 flex justify-between">
+                    <div class="pagetoggle pl10 mt15">
+                        <i class="fa-solid fa-bars grncolor hamburger"></i>
+                        <i class="fa-solid fa-chevron-left greycolor ml25"></i>
+                        <i class="fa-solid fa-chevron-right greycolor ml25"></i>
+                        
+                    </div>
+                    <div class="userlog">
+                        <!--<button class="btn btn-black signbtn">Sign up</button>-->
+                        
+                        <button class="btn btn-white logbtn">Log in</button>
+                    </div>
+                </div>
+                <div class="playlist rounded10 mt10 pt25 pl25">
+                    <h2>Spotify Playlist</h2>
+                    <div class="playcards flex flex-wrap mt25" id="playlistsContainer">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomsec flex justify-between bg-green">
+            <div class="songname">
+            </div>
+            <div class="playbar flex justify-center">
+                <div class="pctrl mb20">
+                    <i class="fa-solid fa-backward-step pointer whtcolor" id="previous"></i>
+                    <i class="fa-solid fa-circle-play ml20 pointer" id="play"></i>
+                    <i class="fa-solid fa-forward-step ml20 pointer whtcolor" id="next"></i>
+                </div>
+                <div class="seekctrl flex justify-between">
+                    <span class="inittime blkcolor mr10"></span>
+                    <div class="seekbar">
+                        <input type="range" class="seekip cstseek" step="0.001" id="seekip" name="points" min="0" max="0" value="0">
+                    </div>
+                    <span class="sttime blkcolor ml10"></span>
+                </div>
+            </div>
+            <div class="playcontrols mr25   ">
+                <div class="flex items-center" id="volume-bar">
+                    <div id="volume-icon" class="icon">
+                        <i class="fa-solid fa-volume-low blkcolor"></i>
+                    </div>
+                    <input class="cstseek" type="range" id="volume-range" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+        <div id="loginPopup" class="popup">
+            <div class="popup-content flex justify-center flex-column">
+                <span class="close text-right">&times;</span>
+                <h2 class="text-center">Log in to Spotify</h2>
+                <p class="m10 text-center">Spotify API requires user to login to play songs, kindly login to test the funcationality of the website,<br> We don't store any crendentials, login will happen at Spotify only </p>
+                <div class="login-button">
+                    <button type="button" id="loginbtn">Log In</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <script src="https://kit.fontawesome.com/52abad041e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js" integrity="sha512-YsR46MmyChktsyMMou+Bs74oCa/CDdwft7rJ5wlnmDzMj1mzqncsfJamEEf99Nk7IB0JpTMo5hS8rxB49FUktQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/script.js"></script>
+    
+</body>
+</html>
