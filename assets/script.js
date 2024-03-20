@@ -6,9 +6,9 @@ const config = {
 };
 
 // Spotify API Configuration
-const clientId = 'YOUR_CLIENT_ID';
-const clientSecret = 'YOUR_CLIENT_SECRET';
-const redirectUrl = 'YOUR_CLIENT_SECRET';
+const clientId = 'be17a6b56e6c42dc8fd8aadbe1b62ac8';
+const clientSecret = '35da63fe5f96466a9cab8e3736a8c3ad';
+const redirectUrl = 'http://localhost:3000';
 const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const tokenEndpoint = "https://accounts.spotify.com/api/token";
 const scope = 'user-read-private user-read-email user-modify-playback-state user-read-playback-state streaming user-read-currently-playing';
